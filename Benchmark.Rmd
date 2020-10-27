@@ -1,0 +1,55 @@
+---
+title: "Test"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+sessionInfo()
+```
+
+
+```{r output = 'hide'}
+library(lme4)  # For example data
+library(brms)
+options(mc.cores = parallel::detectCores(logical = FALSE))
+library(benchmarkme)
+```
+
+```{r}
+get_linear_algebra()
+get_cpu()
+```
+
+Standard benchmarks
+
+```{r message = FALSE}
+res <- benchmark_std(runs = 5)
+plot(res, log = "")
+```
+
+Model compilation time
+
+```{r message = FALSE}
+system.time(
+  brms_sampler <- brm(
+    Reaction ~ Days + (Days | Subject), 
+    data = sleepstudy, 
+    chains = 0
+  )
+)
+```
+
+Sampling time
+
+```{r}
+system.time(
+  update(
+    brms_sampler, 
+    iter = 10000, 
+    chains = 1, 
+    refresh = 0
+  )
+)
+```
