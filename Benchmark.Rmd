@@ -16,6 +16,7 @@ library(lme4)  # For example data
 library(brms)
 options(mc.cores = parallel::detectCores(logical = FALSE))
 library(benchmarkme)
+library(tidyverse)
 ```
 
 ```{r}
@@ -27,7 +28,9 @@ Standard benchmarks
 
 ```{r message = FALSE}
 res <- benchmark_std(runs = 5)
-plot(res, log = "")
+res %>% 
+  group_by(test_group) %>% 
+  summarise(across(user:elapsed, mean))
 ```
 
 Model compilation time
