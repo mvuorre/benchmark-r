@@ -21,4 +21,3 @@ d %>%
   facet_wrap("expr", nrow = 3) +
   theme(axis.title.y = element_blank())
 ```
-
