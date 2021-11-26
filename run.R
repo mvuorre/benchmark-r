@@ -46,6 +46,6 @@ summary(results) %>%
     os = sessionInfo()[[4]],
     date = Sys.Date()
   ) %>% 
-  write_csv("results.csv", append = TRUE, col_names = TRUE)
+  write_csv("results.csv", append = TRUE, col_names = FALSE)
   
 
