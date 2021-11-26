@@ -1,4 +1,4 @@
-expr,min,lq,mean,median,uq,max,neval,cpu,os,date
+expr,min,lq,mean,median,uq,max,neval,cpu,os,date,blas,lapack
 Matrix calculation,2.832691435,2.83637959,2.972347439,2.838059114,3.072770051,3.281837005,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
 Matrix functions,2.450150529,2.525680155,2.5347482726,2.554991055,2.565094111,2.577825513,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
 Programming,2.4257076,2.428431271,2.607461051,2.52763032,2.541094679,3.114441385,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
@@ -9,3 +9,8 @@ Matrix functions,19.838895505,19.914301255,19.9673192586,19.957620381,20.0242949
 Programming,3.765110772,3.771077871,3.8769227174,3.827201797,3.923205973,4.098017174,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
 Stan compile,9.261948753,9.423656033,9.4552999914,9.491779332,9.541927724,9.557188115,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
 Stan sample,12.873533019,12.964576706,13.0935242932,12.988099988,13.173074807,13.468336946,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
+Matrix calculation,3.519973819,3.5646079994999997,3.597433396,3.60924218,3.6361631845,3.663084189,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Matrix functions,3.334229819,3.4320740885000003,3.529624472,3.529918358,3.6273217985,3.724725239,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Programming,3.3778267,3.4220914185,3.480921403,3.466356137,3.5324687545,3.598581372,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Stan compile,9.119465579,9.124597512000001,9.156532231666667,9.129729445,9.175065558,9.220401671,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Stan sample,12.893356853,13.133378453999999,13.219666840333334,13.373400055,13.382821834,13.392243613,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3

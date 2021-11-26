@@ -36,16 +36,22 @@ results <- microbenchmark(
     refresh = 0,
     recompile = FALSE
   ),
-  times = 5
+  times = 3
 )
+
+cpu <- get_cpu()$model_name
+os <- sessionInfo()[[4]]
+date <- Sys.Date()
+blas <- get_linear_algebra()$blas
+lapack <- get_linear_algebra()$lapack
 
 summary(results) %>% 
   as_tibble() %>% 
   mutate(
-    cpu = get_cpu()$model_name,
-    os = sessionInfo()[[4]],
-    date = Sys.Date()
+    cpu, os, date, blas, lapack
   ) %>% 
-  write_csv("results.csv", append = TRUE, col_names = FALSE)
+  write_csv(
+    paste0(os, "-", date, ".csv")
+    )
   
 
