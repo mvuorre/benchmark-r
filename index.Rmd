@@ -2,22 +2,23 @@
 title: "Results"
 author: "Matti"
 date: "26/11/2021"
-output: html_document
+output: github_document
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+knitr::opts_chunk$set(fig.retina = 2)
 d <- read_csv("results.csv")
 ```
 
-```{r}
+```{r results-columns, fig.height = 9}
 d %>% 
   ggplot(aes(mean, cpu)) +
   scale_x_continuous("Mean execution time") +
   geom_col() +
-  facet_wrap("expr") +
+  facet_wrap("expr", nrow = 3) +
   theme(axis.title.y = element_blank())
 ```
 
