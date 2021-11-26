@@ -5,7 +5,7 @@ Matti
 
 ``` r
 d %>% 
-  ggplot(aes(mean, cpu)) +
+  ggplot(aes(mean, paste(cpu, os, sep = "\n"))) +
   scale_x_continuous("Mean execution time") +
   geom_col() +
   facet_wrap("expr", nrow = 3) +
