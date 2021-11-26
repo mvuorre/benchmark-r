@@ -5,10 +5,10 @@ Matti
 
 ``` r
 d %>% 
-  ggplot(aes(mean, paste(cpu, os, sep = "\n"))) +
+  ggplot(aes(mean, paste(os, cpu, blas, sep = "\n"))) +
   scale_x_continuous("Mean execution time", expand = expansion(c(0, .1))) +
   geom_col() +
-  facet_wrap("expr", nrow = 3) +
+  facet_wrap("expr", ncol = 1) +
   theme(axis.title.y = element_blank())
 ```
 
