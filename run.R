@@ -1,5 +1,51 @@
-library(rmarkdown)
-library(benchmarkme)
-os <- sessionInfo()[[4]]
+# This script conducts a set of standard-ish benchmarks and
+# saves results to a csv, including data on the system
 
-render("Benchmark.Rmd", output_file = paste0(os, ".md"))
+library(brms)
+library(cmdstanr)
+library(benchmarkme)
+library(microbenchmark)
+library(tidyverse)
+
+options(brms.backend = "cmdstanr")
+
+# Compile a model to sample from in benchmarks
+# from ?brm()
+brms_sampler <- brm(
+  rating ~ period + carry + cs(treat),
+  data = inhaler, 
+  family = sratio("logit"),
+  chains = 0
+)
+
+# Run benchmarks
+results <- microbenchmark(
+  `Matrix calculation` = benchmark_matrix_cal(runs = 1), 
+  `Matrix functions` = benchmark_matrix_fun(runs = 1),
+  `Programming` = benchmark_prog(runs = 1),
+  `Stan compile` = brm(
+    rating ~ period + carry + cs(treat),
+    data = inhaler, 
+    family = sratio("logit"),
+    chains = 0
+  ),
+  `Stan sample` = update(
+    brms_sampler, 
+    iter = 10000, 
+    chains = 1, 
+    refresh = 0,
+    recompile = FALSE
+  ),
+  times = 5
+)
+
+summary(results) %>% 
+  as_tibble() %>% 
+  mutate(
+    cpu = get_cpu()$model_name,
+    os = sessionInfo()[[4]],
+    date = Sys.Date()
+  ) %>% 
+  write_csv("results.csv", append = TRUE, col_names = TRUE)
+  
+

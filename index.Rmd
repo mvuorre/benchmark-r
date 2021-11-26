@@ -1,0 +1,23 @@
+---
+title: "Results"
+author: "Matti"
+date: "26/11/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+d <- read_csv("results.csv")
+```
+
+```{r}
+d %>% 
+  ggplot(aes(mean, cpu)) +
+  scale_x_continuous("Mean execution time") +
+  geom_col() +
+  facet_wrap("expr") +
+  theme(axis.title.y = element_blank())
+```
+
