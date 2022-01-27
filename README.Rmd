@@ -27,6 +27,8 @@ theme_set(
 )
 ```
 
+Where possible these systems use optimised blas/lapack.
+
 ```{r results-columns, fig.height = 12}
 d %>% 
   ggplot(aes(paste(os, cpu, sep = "\n"), mean)) +
