@@ -51,7 +51,7 @@ summary(results) %>%
     cpu, os, date, blas, lapack
   ) %>% 
   write_csv(
-    paste0(os, "-", date, ".csv")
-    )
+    "results.csv", append = TRUE
+  )
   
 

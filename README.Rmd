@@ -10,17 +10,20 @@ editor_options:
 ```{r setup, include=FALSE}
 library(tidyverse)
 knitr::opts_chunk$set(fig.retina = 2)
-d <- list.files(pattern = ".csv") %>% 
-  read_csv()
+d <- read_csv("results.csv")
 
-# Take distincts
-d <- distinct(d, expr, cpu, date, blas, .keep_all = TRUE)
+# Take the latest tests
+d <- d %>% 
+  arrange(cpu, os, date) %>% 
+  distinct(.keep_all = TRUE)
 ```
 
 ```{r results-columns, fig.height = 12}
 d %>% 
-  ggplot(aes(mean, paste(os, cpu, blas, sep = "\n"))) +
-  scale_x_continuous("Mean execution time", expand = expansion(c(0, .1))) +
+  ggplot(aes(mean, paste(os, cpu, sep = "\n"))) +
+  scale_x_continuous(
+    "Mean execution time", expand = expansion(c(0, .1))
+  ) +
   geom_col() +
   facet_wrap("expr", ncol = 1) +
   theme(axis.title.y = element_blank())
