@@ -12,20 +12,32 @@ library(tidyverse)
 knitr::opts_chunk$set(fig.retina = 2)
 d <- read_csv("results.csv")
 
-# Take the latest tests
+# Take the latest tests and ignore BLAS/LAPACK
 d <- d %>% 
   arrange(cpu, os, date) %>% 
-  distinct(.keep_all = TRUE)
+  distinct(cpu, os, date, expr, .keep_all = TRUE)
+
+theme_set(
+  theme_linedraw() +
+    theme(
+      panel.grid.major.x = element_blank(),
+      panel.grid.minor.x = element_blank(),
+      panel.grid.minor.y = element_blank()
+    )
+)
 ```
 
 ```{r results-columns, fig.height = 12}
 d %>% 
-  ggplot(aes(mean, paste(os, cpu, sep = "\n"))) +
-  scale_x_continuous(
-    "Mean execution time", expand = expansion(c(0, .1))
+  ggplot(aes(paste(os, cpu, sep = "\n"), mean)) +
+  scale_y_continuous(
+    "Mean execution time", 
+    expand = expansion(c(0, .02)),
+    labels = ~str_glue("{.}s")
   ) +
-  geom_col() +
-  facet_wrap("expr", ncol = 1) +
-  theme(axis.title.y = element_blank())
+  scale_x_discrete("System") +
+  geom_col(fill = "gray80", col = "black") +
+  geom_errorbar(aes(ymin = min, ymax = max), width = .1) +
+  facet_wrap("expr", ncol = 1, scales = "free_y")
 ```
 

@@ -1,26 +1,21 @@
 expr,min,lq,mean,median,uq,max,neval,cpu,os,date,blas,lapack
-Matrix calculation,2.832691435,2.83637959,2.972347439,2.838059114,3.072770051,3.281837005,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
-Matrix functions,2.450150529,2.525680155,2.5347482726,2.554991055,2.565094111,2.577825513,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
-Programming,2.4257076,2.428431271,2.607461051,2.52763032,2.541094679,3.114441385,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
-Stan compile,6.013781231,6.146849109,6.321063562,6.286810686,6.531609386,6.626267398,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
-Stan sample,14.303521334,14.64837914,14.8661785938,14.886651173,15.105849514,15.386491808,5,Apple M1 Pro,macOS Monterey 12.0.1,2021-11-26
-Matrix calculation,9.470839836,9.527423049,9.6383031892,9.57763336,9.652361767,9.963257934,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
-Matrix functions,19.838895505,19.914301255,19.9673192586,19.957620381,20.024294951,20.101484201,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
-Programming,3.765110772,3.771077871,3.8769227174,3.827201797,3.923205973,4.098017174,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
-Stan compile,9.261948753,9.423656033,9.4552999914,9.491779332,9.541927724,9.557188115,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
-Stan sample,12.873533019,12.964576706,13.0935242932,12.988099988,13.173074807,13.468336946,5,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26
-Matrix calculation,3.519973819,3.5646079994999997,3.597433396,3.60924218,3.6361631845,3.663084189,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
-Matrix functions,3.334229819,3.4320740885000003,3.529624472,3.529918358,3.6273217985,3.724725239,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
-Programming,3.3778267,3.4220914185,3.480921403,3.466356137,3.5324687545,3.598581372,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
-Stan compile,9.119465579,9.124597512000001,9.156532231666667,9.129729445,9.175065558,9.220401671,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
-Stan sample,12.893356853,13.133378453999999,13.219666840333334,13.373400055,13.382821834,13.392243613,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,2021-11-26,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
-Matrix calculation,5.897515251,6.088244937,6.1223424596,6.133746508,6.186938459,6.305267143,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,2021-11-26
-Matrix functions,5.961620308,6.089082851,6.2062496156,6.128402124,6.182563419,6.669579376,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,2021-11-26
-Programming,5.357964977,5.371807494,5.486093649,5.560910455,5.565962861,5.573822458,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,2021-11-26
-Stan compile,14.643965736,14.660580637,14.708160976,14.733989246,14.74288274,14.759386521,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,2021-11-26
-Stan sample,23.937231484,24.203614832,24.8169094546,24.830829568,25.550105349,25.56276604,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,2021-11-26
-Matrix calculation,2.863079569,2.9451495149999998,3.0891936123333332,3.027219461,3.2022506340000003,3.377281807,3,Apple M1 Pro,macOS Monterey 12.1,2022-01-27,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
-Matrix functions,2.359068537,2.40722439,2.4406128903333335,2.455380243,2.4813850669999997,2.507389891,3,Apple M1 Pro,macOS Monterey 12.1,2022-01-27,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
-Programming,2.214833038,2.3670272519999997,2.4819069286666666,2.519221466,2.615443874,2.711666282,3,Apple M1 Pro,macOS Monterey 12.1,2022-01-27,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
-Stan compile,5.628436253,5.730668420500001,5.841997258,5.832900588,5.9487777605000005,6.064654933,3,Apple M1 Pro,macOS Monterey 12.1,2022-01-27,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
-Stan sample,14.118587144,14.4470500545,14.681470663666667,14.775512965,14.9629124235,15.150311882,3,Apple M1 Pro,macOS Monterey 12.1,2022-01-27,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
+Matrix calculation,2.832691435,2.83637959,2.972347439,2.838059114,3.072770051,3.281837005,5,Apple M1 Pro,macOS Monterey 12.0.1,26/11/2021,,
+Matrix functions,2.450150529,2.525680155,2.534748273,2.554991055,2.565094111,2.577825513,5,Apple M1 Pro,macOS Monterey 12.0.1,26/11/2021,,
+Programming,2.4257076,2.428431271,2.607461051,2.52763032,2.541094679,3.114441385,5,Apple M1 Pro,macOS Monterey 12.0.1,26/11/2021,,
+Stan compile,6.013781231,6.146849109,6.321063562,6.286810686,6.531609386,6.626267398,5,Apple M1 Pro,macOS Monterey 12.0.1,26/11/2021,,
+Stan sample,14.30352133,14.64837914,14.86617859,14.88665117,15.10584951,15.38649181,5,Apple M1 Pro,macOS Monterey 12.0.1,26/11/2021,,
+Matrix calculation,3.519973819,3.564607999,3.597433396,3.60924218,3.636163185,3.663084189,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,26/11/2021,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Matrix functions,3.334229819,3.432074089,3.529624472,3.529918358,3.627321799,3.724725239,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,26/11/2021,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Programming,3.3778267,3.422091419,3.480921403,3.466356137,3.532468755,3.598581372,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,26/11/2021,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Stan compile,9.119465579,9.124597512,9.156532232,9.129729445,9.175065558,9.220401671,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,26/11/2021,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Stan sample,12.89335685,13.13337845,13.21966684,13.37340006,13.38282183,13.39224361,3,AMD Ryzen 9 3900X 12-Core Processor,Ubuntu 20.04.3 LTS,26/11/2021,/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3,/usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3
+Matrix calculation,5.897515251,6.088244937,6.12234246,6.133746508,6.186938459,6.305267143,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,26/11/2021,,
+Matrix functions,5.961620308,6.089082851,6.206249616,6.128402124,6.182563419,6.669579376,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,26/11/2021,,
+Programming,5.357964977,5.371807494,5.486093649,5.560910455,5.565962861,5.573822458,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,26/11/2021,,
+Stan compile,14.64396574,14.66058064,14.70816098,14.73398925,14.74288274,14.75938652,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,26/11/2021,,
+Stan sample,23.93723148,24.20361483,24.81690945,24.83082957,25.55010535,25.56276604,5,Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz,macOS Monterey 12.0.1,26/11/2021,,
+Matrix calculation,2.863079569,2.945149515,3.089193612,3.027219461,3.202250634,3.377281807,3,Apple M1 Pro,macOS Monterey 12.1,27/01/2022,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
+Matrix functions,2.359068537,2.40722439,2.44061289,2.455380243,2.481385067,2.507389891,3,Apple M1 Pro,macOS Monterey 12.1,27/01/2022,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
+Programming,2.214833038,2.367027252,2.481906929,2.519221466,2.615443874,2.711666282,3,Apple M1 Pro,macOS Monterey 12.1,27/01/2022,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
+Stan compile,5.628436253,5.730668421,5.841997258,5.832900588,5.948777761,6.064654933,3,Apple M1 Pro,macOS Monterey 12.1,27/01/2022,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
+Stan sample,14.11858714,14.44705005,14.68147066,14.77551297,14.96291242,15.15031188,3,Apple M1 Pro,macOS Monterey 12.1,27/01/2022,,/Library/Frameworks/R.framework/Versions/4.1-arm64/Resources/lib/libRlapack.dylib
